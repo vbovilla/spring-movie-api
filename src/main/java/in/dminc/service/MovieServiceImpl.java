@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class MovieServiceImpl implements MovieService {
@@ -67,11 +68,35 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public MovieDto getMovie(Integer movieId) {
-        return null;
+        // check the data in DB, and if exists fetch the data of given item
+        Movie movie = movieRepository.findById(movieId).orElseThrow(() -> new RuntimeException("No movie found with movieId: " + movieId));
+
+        // generate posterUrl
+        String posterUrl = baseUrl + "/file/" + movie.getPoster();
+
+        // map to movieDto object and return it
+        return new MovieDto(
+                movie.getMovieId(),
+                movie.getTitle(),
+                movie.getDirector(),
+                movie.getStudio(),
+                movie.getMovieCast(),
+                movie.getReleaseYear(),
+                movie.getPoster(),
+                posterUrl
+        );
     }
 
     @Override
     public List<MovieDto> getAllMovies() {
-        return List.of();
+        return movieRepository.findAll().stream().map(movie -> new MovieDto(
+                movie.getMovieId(),
+                movie.getTitle(),
+                movie.getDirector(),
+                movie.getStudio(),
+                movie.getMovieCast(),
+                movie.getReleaseYear(),
+                movie.getPoster(),
+                baseUrl + "/file/" + movie.getPoster())).collect(Collectors.toList());
     }
 }
