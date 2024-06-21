@@ -89,14 +89,16 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public List<MovieDto> getAllMovies() {
-        return movieRepository.findAll().stream().map(movie -> new MovieDto(
-                movie.getMovieId(),
-                movie.getTitle(),
-                movie.getDirector(),
-                movie.getStudio(),
-                movie.getMovieCast(),
-                movie.getReleaseYear(),
-                movie.getPoster(),
-                baseUrl + "/file/" + movie.getPoster())).collect(Collectors.toList());
+        return movieRepository.findAll().stream()
+                .map(movie -> new MovieDto(
+                        movie.getMovieId(),
+                        movie.getTitle(),
+                        movie.getDirector(),
+                        movie.getStudio(),
+                        movie.getMovieCast(),
+                        movie.getReleaseYear(),
+                        movie.getPoster(),
+                        baseUrl + "/file/" + movie.getPoster()))
+                .collect(Collectors.toList());
     }
 }
