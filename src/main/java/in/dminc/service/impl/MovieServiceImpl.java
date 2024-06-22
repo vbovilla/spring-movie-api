@@ -48,7 +48,7 @@ public class MovieServiceImpl implements MovieService {
         }
 
         String posterFileName;
-        if (Files.exists(Paths.get(path + File.separator + file.getOriginalFilename()))) {
+        if (!Files.exists(Paths.get(path + File.separator + file.getOriginalFilename()))) {
             // upload file
             posterFileName = fileService.uploadFile(path, file);
         } else {

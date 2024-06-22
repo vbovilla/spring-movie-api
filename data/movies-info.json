@@ -1,6 +1,5 @@
 [
   {
-    "movieId": "1",
     "title": "Avengers: Age of Ultron",
     "director": "Anthony Russo",
     "studio": "Walt Disney Studios",
@@ -14,7 +13,6 @@
     "releaseYear": 2015
   },
   {
-    "movieId": "2",
     "title": "Avengers: Infinity War",
     "director": "Anthony Russo",
     "studio": "Walt Disney Studios",
@@ -28,7 +26,6 @@
     "releaseYear": 2018
   },
   {
-    "movieId": "3",
     "title": "Avengers: Endgame",
     "director": "Anthony Russo",
     "studio": "Walt Disney Studios",
@@ -40,5 +37,161 @@
       "Scarlett Johansson"
     ],
     "releaseYear": 2019
+  },
+  {
+    "title": "Die Hard",
+    "director": "John McTiernan",
+    "studio": "20th Century Fox",
+    "movieCast": [
+      "Bruce Willis",
+      "Alan Rickman",
+      "Bonnie Bedelia",
+      "Robert Davi"
+    ],
+    "releaseYear": 1988
+  },
+  {
+    "title": "Die Hard 2",
+    "director": "Renny Harlin",
+    "studio": "20th Century Fox",
+    "movieCast": [
+      "Bruce Willis",
+      "Robert Lipton",
+      "Art Evans",
+      "Don Harvey"
+    ],
+    "releaseYear": 1990
+  },
+  {
+    "title": "Die Hard with a Vengeance",
+    "director": "John McTiernan",
+    "studio": "20th Century Fox",
+    "movieCast": [
+      "Bruce Willis",
+      "Samuel L. Jackson",
+      "Alan Rickman",
+      "Jeremy Irons"
+    ],
+    "releaseYear": 1995
+  },
+  {
+    "title": "Live Free or Die Hard",
+    "director": "Len Wiseman",
+    "studio": "20th Century Fox",
+    "movieCast": [
+      "Bruce Willis",
+      "Tim DeZarn",
+      "Andrew Friedman",
+      "Mary Elizabeth Winstead"
+    ],
+    "releaseYear": 2007
+  },
+  {
+    "title": "A Good Day to Die Hard",
+    "director": "John Moore",
+    "studio": "20th Century Fox",
+    "movieCast": [
+      "Mary Elizabeth Winstead",
+      "Cole Hauser",
+      "Bruce Willis",
+      "Jai Courtney"
+    ],
+    "releaseYear": 2013
+  },
+  {
+    "title": "Titanic",
+    "director": "James Cameron",
+    "studio": "20th Century Fox",
+    "movieCast": [
+      "Leonardo DiCaprio",
+      "Kate Winslet",
+      "Frances Fisher",
+      "Kathy Bates"
+    ],
+    "releaseYear": 1997
+  },
+  {
+    "title": "Mission: Impossible",
+    "director": "Brian De Palma",
+    "studio": "Paramount Pictures",
+    "movieCast": [
+      "Tom Cruise",
+      "Jon Voight",
+      "Emmanuelle Béart",
+      "Emilio Estevez"
+    ],
+    "releaseYear": 1996
+  },
+  {
+    "title": "Mission: Impossible II",
+    "director": "John Woo",
+    "studio": "Paramount Pictures",
+    "movieCast": [
+      "Tom Cruise",
+      "Brendan Gleeson",
+      "Anthony Hopkins",
+      "Thandie Newton"
+    ],
+    "releaseYear": 2000
+  },
+  {
+    "title": "Mission: Impossible III",
+    "director": "J.J. Abrams",
+    "studio": "Paramount Pictures",
+    "movieCast": [
+      "Tom Cruise",
+      "Keri Russell",
+      "Michelle Monaghan",
+      "Billy Crudup"
+    ],
+    "releaseYear": 2006
+  },
+  {
+    "title": "Mission: Impossible - Ghost Protocol",
+    "director": "Brad Bird",
+    "studio": "Paramount Pictures",
+    "movieCast": [
+      "Tom Cruise",
+      "Michelle Monaghan",
+      "Paula Patton",
+      "Jeremy Renner"
+    ],
+    "releaseYear": 2011
+  },
+  {
+    "title": "Mission: Impossible - Rogue Nation",
+    "director": "Christopher McQuarrie",
+    "studio": "Paramount Pictures",
+    "movieCast": [
+      "Tom Cruise",
+      "Rebecca Ferguson",
+      "Simon Pegg",
+      "Jeremy Renner"
+    ],
+    "releaseYear": 2015
+  },
+  {
+    "title": "Mission: Impossible - Fallout",
+    "director": "Christopher McQuarrie",
+    "studio": "Paramount Pictures",
+    "movieCast": [
+      "Tom Cruise",
+      "Rebecca Ferguson",
+      "Henry Cavill",
+      "Michelle Monaghan"
+    ],
+    "releaseYear": 2018
+  },
+  {
+    "title": "Mission: Impossible - Dead Reckoning Part One",
+    "director": "Christopher McQuarrie",
+    "studio": "Paramount Pictures",
+    "movieCast": [
+      "Hayley Atwell",
+      "Rebecca Ferguson",
+      "Tom Cruise",
+      "Vanessa Kirby"
+    ],
+    "releaseYear": 2023
   }
 ]

@@ -3,6 +3,7 @@ package in.dminc.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import in.dminc.dto.MovieDto;
+import in.dminc.dto.MoviePageResponse;
 import in.dminc.service.MovieService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+
+import static in.dminc.utils.AppConstants.*;
 
 @RestController
 @RequestMapping("/api/v1/movie")
@@ -56,6 +59,27 @@ public class MovieController {
     @DeleteMapping("/delete/{movieId}")
     public ResponseEntity<String> deleteMovie(@PathVariable Integer movieId) throws IOException {
         return new ResponseEntity<>(movieService.deleteMovie(movieId), HttpStatus.OK);
+    }
+
+    @GetMapping("/page")
+    public ResponseEntity<MoviePageResponse> getMoviesByPage(
+            @RequestParam(defaultValue = PAGE_NUMBER) Integer pageNumber,
+            @RequestParam(defaultValue = PAGE_SIZE) Integer pageSize
+    ) {
+        MoviePageResponse moviesByPage = movieService.getMoviesByPage(pageNumber, pageSize);
+        return new ResponseEntity<>(moviesByPage, HttpStatus.OK);
+    }
+
+    @GetMapping("/page-sort")
+    public ResponseEntity<MoviePageResponse> getMoviesByPageAndSort(
+            @RequestParam(defaultValue = PAGE_NUMBER) Integer pageNumber,
+            @RequestParam(defaultValue = PAGE_SIZE) Integer pageSize,
+            @RequestParam(defaultValue = SORT_BY_FIELD) String sortByField,
+            @RequestParam(defaultValue = SORT_ORDER) String sortOrder
+
+    ) {
+        MoviePageResponse moviesByPage = movieService.getMoviesByPageAndSorted(pageNumber, pageSize, sortByField, sortOrder);
+        return new ResponseEntity<>(moviesByPage, HttpStatus.OK);
     }
 
     // convert string to Java class object
