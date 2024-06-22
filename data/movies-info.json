@@ -1,44 +1,44 @@
 [
-	{
-		"movieId": "1",
-		"title": "Avengers: Infinity War",
-		"director": "Anthony Russo",
-		"studio": "Walt Disney Studios",
-		"movieCast": [
-			"Robert Downey Jr.",
-			"Chris Hemsworth",
-			"Mark Ruffalo",
-			"Chris Evans",
-			"Scarlett Johansson"
-		],
-		"releaseYear": 2018
-	},
-	{
-		"movieId": "2",
-		"title": "Avengers: Endgame",
-		"director": "Anthony Russo",
-		"studio": "Walt Disney Studios",
-		"movieCast": [
-			"Robert Downey Jr.",
-			"Chris Hemsworth",
-			"Mark Ruffalo",
-			"Chris Evans",
-			"Scarlett Johansson"
-		],
-		"releaseYear": 2019
-	},
-	{
-		"movieId": "3",
-		"title": "Avengers: Age of Ultron",
-		"director": "Anthony Russo",
-		"studio": "Walt Disney Studios",
-		"movieCast": [
-			"Robert Downey Jr.",
-			"Chris Hemsworth",
-			"Mark Ruffalo",
-			"Chris Evans",
-			"Scarlett Johansson"
-		],
-		"releaseYear": 2015
-	}
+  {
+    "movieId": "1",
+    "title": "Avengers: Age of Ultron",
+    "director": "Anthony Russo",
+    "studio": "Walt Disney Studios",
+    "movieCast": [
+      "Robert Downey Jr.",
+      "Chris Hemsworth",
+      "Mark Ruffalo",
+      "Chris Evans",
+      "Scarlett Johansson"
+    ],
+    "releaseYear": 2015
+  },
+  {
+    "movieId": "2",
+    "title": "Avengers: Infinity War",
+    "director": "Anthony Russo",
+    "studio": "Walt Disney Studios",
+    "movieCast": [
+      "Robert Downey Jr.",
+      "Chris Hemsworth",
+      "Mark Ruffalo",
+      "Chris Evans",
+      "Scarlett Johansson"
+    ],
+    "releaseYear": 2018
+  },
+  {
+    "movieId": "3",
+    "title": "Avengers: Endgame",
+    "director": "Anthony Russo",
+    "studio": "Walt Disney Studios",
+    "movieCast": [
+      "Robert Downey Jr.",
+      "Chris Hemsworth",
+      "Mark Ruffalo",
+      "Chris Evans",
+      "Scarlett Johansson"
+    ],
+    "releaseYear": 2019
+  }
 ]

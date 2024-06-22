@@ -1,5 +1,6 @@
-package in.dminc.service;
+package in.dminc.service.impl;
 
+import in.dminc.service.FileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -41,6 +42,9 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public InputStream downloadFile(String path, String fileName) throws FileNotFoundException {
+        if (!Files.exists(Paths.get(path + File.separator + fileName))) {
+            throw new FileNotFoundException("File not found: " + path + File.separator + fileName);
+        }
         String filePath = path + File.separator + fileName;
         return new FileInputStream(filePath);
     }

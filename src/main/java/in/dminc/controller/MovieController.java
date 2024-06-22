@@ -43,6 +43,21 @@ public class MovieController {
         return new ResponseEntity<>(movies, HttpStatus.OK);
     }
 
+    @PutMapping("/update/{movieId}")
+    public ResponseEntity<MovieDto> updateMovie(@PathVariable Integer movieId,
+                                                @RequestPart MultipartFile file,
+                                                @RequestPart String movieDtoObj) throws IOException {
+        if (file.isEmpty()) file = null;
+        MovieDto movieDto = convertToMovieDto(movieDtoObj);
+        MovieDto updatedMovie = movieService.updateMovie(movieId, movieDto, file);
+        return new ResponseEntity<>(updatedMovie, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{movieId}")
+    public ResponseEntity<String> deleteMovie(@PathVariable Integer movieId) throws IOException {
+        return new ResponseEntity<>(movieService.deleteMovie(movieId), HttpStatus.OK);
+    }
+
     // convert string to Java class object
     private MovieDto convertToMovieDto(String movieDtoObj) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
