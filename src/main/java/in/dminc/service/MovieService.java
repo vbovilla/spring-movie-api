@@ -1,6 +1,7 @@
 package in.dminc.service;
 
 import in.dminc.dto.MovieDto;
+import in.dminc.dto.MoviePageResponse;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -16,4 +17,8 @@ public interface MovieService {
     MovieDto updateMovie(Integer movieId, MovieDto movieDto, MultipartFile file) throws IOException;
 
     String deleteMovie(Integer movieId) throws IOException;
+
+    MoviePageResponse getMoviesByPage(Integer pageNumber, Integer pageSize);
+
+    MoviePageResponse getMoviesByPageAndSorted(Integer pageNumber, Integer pageSize, String sortByField, String sortDirection);
 }
