@@ -8,6 +8,7 @@ import in.dminc.service.MovieService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -27,6 +28,7 @@ public class MovieController {
         this.movieService = movieService;
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping("/add-movie")
     public ResponseEntity<MovieDto> addMovie(@RequestPart MultipartFile file, @RequestPart String movieDtoObj) throws IOException {
         MovieDto movieDto = convertToMovieDto(movieDtoObj);
@@ -46,6 +48,7 @@ public class MovieController {
         return new ResponseEntity<>(movies, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PutMapping("/update/{movieId}")
     public ResponseEntity<MovieDto> updateMovie(@PathVariable Integer movieId,
                                                 @RequestPart MultipartFile file,
@@ -56,6 +59,7 @@ public class MovieController {
         return new ResponseEntity<>(updatedMovie, HttpStatus.OK);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @DeleteMapping("/delete/{movieId}")
     public ResponseEntity<String> deleteMovie(@PathVariable Integer movieId) throws IOException {
         return new ResponseEntity<>(movieService.deleteMovie(movieId), HttpStatus.OK);
